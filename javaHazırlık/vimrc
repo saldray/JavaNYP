@@ -1,0 +1,61 @@
+set number
+" İsteğe bağlı: İmlecin bulunduğu satırın numarasını sabit, diğerlerini göreceli gösterir. Hızlı hareket için kullanışlıdır.
+" set relativenumber
+
+set nocompatible
+filetype on
+filetype plugin on
+
+" Otomatik girintilemeyi açar
+filetype indent on
+
+" Smart indent'i açar, daha akıllıca girintileme yapar.
+" set smartindent
+
+" Sözdizimini vurgulamayı açar
+syntax on
+
+"let g:vimwiki_list = [{'syntax': 'markdown',
+                     \'ext': 'md'}]
+
+
+"set noexpandtab
+set expandtab
+set tabstop=4
+set shiftwidth=4
+set autoindent
+
+" Line wrapping
+set wrap
+set linebreak
+
+set wildmenu
+set wildmode=list:longest
+set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
+
+
+
+" vimrc dosyasının başına ekleyin
+call plug#begin('~/.vim/plugged')
+
+" Eklentilerinizi buraya ekleyeceksiniz
+" Plug 'eklenti-adı/repo'
+Plug 'preservim/nerdtree'
+
+Plug 'vim-airline/vim-airline'
+
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+" Plug 'Raimondi/delimitMate'
+
+" Plug 'jiangmiao/auto-pairs'
+
+Plug 'preservim/nerdtree'
+" Kullanımı: Vim'de :NERDTree komutunu yazarak açabilir, tekrar aynı
+" komutla kapatabilirsiniz. En sık kullanılan komutları öğrenmek için ?
+" tuşuna basabilirsiniz.
+
+call plug#end()
+
+" `which node` komutunun çıktısını kullanarak node yolunu belirleyin
+let g:coc_node_path = '/usr/bin/node'
