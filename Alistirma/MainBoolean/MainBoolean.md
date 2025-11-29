@@ -75,3 +75,17 @@ public class MainBool {
 - Use inheritance if you want specialized number types.
 
 Would you like me to show you a **more advanced OOP version** with multiple classes (like `NumberAnalyzer` and `PrimeChecker`), or keep it simple like this?
+
+---
+
+- Benim yazdığım kod
+
+```python
+sayi = int(input("Bir sayı giriniz: "))
+ isPrime = True
+ for i in range(2,int(sayi/2)+1):
+     if(sayi % i == 0):
+         isPrime = False
+         break
+ print("prime" if isPrime else "not prime")
+```
